@@ -177,6 +177,60 @@ number_to_file_generator.cpp.s:
 	$(MAKE) -f CMakeFiles/zadanie2.dir/build.make CMakeFiles/zadanie2.dir/number_to_file_generator.cpp.s
 .PHONY : number_to_file_generator.cpp.s
 
+own_avl.o: own_avl.cpp.o
+
+.PHONY : own_avl.o
+
+# target to build an object file
+own_avl.cpp.o:
+	$(MAKE) -f CMakeFiles/zadanie2.dir/build.make CMakeFiles/zadanie2.dir/own_avl.cpp.o
+.PHONY : own_avl.cpp.o
+
+own_avl.i: own_avl.cpp.i
+
+.PHONY : own_avl.i
+
+# target to preprocess a source file
+own_avl.cpp.i:
+	$(MAKE) -f CMakeFiles/zadanie2.dir/build.make CMakeFiles/zadanie2.dir/own_avl.cpp.i
+.PHONY : own_avl.cpp.i
+
+own_avl.s: own_avl.cpp.s
+
+.PHONY : own_avl.s
+
+# target to generate assembly for a file
+own_avl.cpp.s:
+	$(MAKE) -f CMakeFiles/zadanie2.dir/build.make CMakeFiles/zadanie2.dir/own_avl.cpp.s
+.PHONY : own_avl.cpp.s
+
+own_hash_table.o: own_hash_table.cpp.o
+
+.PHONY : own_hash_table.o
+
+# target to build an object file
+own_hash_table.cpp.o:
+	$(MAKE) -f CMakeFiles/zadanie2.dir/build.make CMakeFiles/zadanie2.dir/own_hash_table.cpp.o
+.PHONY : own_hash_table.cpp.o
+
+own_hash_table.i: own_hash_table.cpp.i
+
+.PHONY : own_hash_table.i
+
+# target to preprocess a source file
+own_hash_table.cpp.i:
+	$(MAKE) -f CMakeFiles/zadanie2.dir/build.make CMakeFiles/zadanie2.dir/own_hash_table.cpp.i
+.PHONY : own_hash_table.cpp.i
+
+own_hash_table.s: own_hash_table.cpp.s
+
+.PHONY : own_hash_table.s
+
+# target to generate assembly for a file
+own_hash_table.cpp.s:
+	$(MAKE) -f CMakeFiles/zadanie2.dir/build.make CMakeFiles/zadanie2.dir/own_hash_table.cpp.s
+.PHONY : own_hash_table.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +246,12 @@ help:
 	@echo "... number_to_file_generator.o"
 	@echo "... number_to_file_generator.i"
 	@echo "... number_to_file_generator.s"
+	@echo "... own_avl.o"
+	@echo "... own_avl.i"
+	@echo "... own_avl.s"
+	@echo "... own_hash_table.o"
+	@echo "... own_hash_table.i"
+	@echo "... own_hash_table.s"
 .PHONY : help
 
 

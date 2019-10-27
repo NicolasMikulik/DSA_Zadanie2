@@ -5,3 +5,7 @@ CMakeFiles/zadanie2.dir/main.cpp.o: ../main.cpp
 
 CMakeFiles/zadanie2.dir/number_to_file_generator.cpp.o: ../number_to_file_generator.cpp
 
+CMakeFiles/zadanie2.dir/own_avl.cpp.o: ../own_avl.cpp
+
+CMakeFiles/zadanie2.dir/own_hash_table.cpp.o: ../own_hash_table.cpp
+

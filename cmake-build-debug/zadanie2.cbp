@@ -90,6 +90,12 @@
 		<Unit filename="/home/nicolas/CLionProjects/zadanie2/number_to_file_generator.cpp">
 			<Option target="zadanie2"/>
 		</Unit>
+		<Unit filename="/home/nicolas/CLionProjects/zadanie2/own_avl.cpp">
+			<Option target="zadanie2"/>
+		</Unit>
+		<Unit filename="/home/nicolas/CLionProjects/zadanie2/own_hash_table.cpp">
+			<Option target="zadanie2"/>
+		</Unit>
 		<Unit filename="/home/nicolas/CLionProjects/zadanie2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

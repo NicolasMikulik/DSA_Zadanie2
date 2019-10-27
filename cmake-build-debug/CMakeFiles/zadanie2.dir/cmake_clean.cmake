@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/zadanie2.dir/main.cpp.o"
   "CMakeFiles/zadanie2.dir/number_to_file_generator.cpp.o"
+  "CMakeFiles/zadanie2.dir/own_hash_table.cpp.o"
+  "CMakeFiles/zadanie2.dir/own_avl.cpp.o"
   "zadanie2.pdb"
   "zadanie2"
 )

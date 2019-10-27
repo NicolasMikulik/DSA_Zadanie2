@@ -1,17 +1,24 @@
+//
+// Created by nicolas on 27. 10. 2019.
+//
+
+/*
+// uloha3-3.c -- Nicolas Mikulík, 9.10.2019 16:11
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <math.h>
 
 struct Node{
-    int key;
+    unsigned int key;
     int height;
     struct Node *left;
     struct Node *right;
 };
 
 int max(int a, int b) {return (a>b ? a : b);}
-int min( int a,  int b) {return (a<b ? a : b);}
+unsigned int min(unsigned int a, unsigned int b) {return (a<b ? a : b);}
 
 int getHeight(struct Node* node){
     if(node == NULL)
@@ -26,7 +33,7 @@ int getBalance(struct Node* node){
     return getHeight(node->right) - getHeight(node->left);
 }
 
-struct Node* newNode( int key){
+struct Node* newNode(unsigned int key){
     struct Node *node=(struct Node*)malloc(sizeof(struct Node));
     node->key=key;
     node->left=NULL;
@@ -59,7 +66,7 @@ struct Node* rotateRight(struct Node* pivot){
     return pivot;
 }
 
-struct Node* insert(struct Node* node, int key){
+struct Node* insert(struct Node* node, unsigned int key){
     if(node == NULL)
         return (newNode(key));
     if(key < node->key)
@@ -90,7 +97,7 @@ struct Node* insert(struct Node* node, int key){
     return node;
 }
 
-bool checkPresence(struct Node* node, int key){
+bool checkPresence(struct Node* node, unsigned int key){
     if(node == NULL){
         return false;}
     if(node->key == key){
@@ -102,7 +109,7 @@ bool checkPresence(struct Node* node, int key){
     return false;
 }
 
-void inorderTraversal(struct Node *root, int * array, int *index){
+void inorderTraversal(struct Node *root, unsigned int * array, int *index){
     if(root == NULL)
         return;
     else{
@@ -116,35 +123,28 @@ void inorderTraversal(struct Node *root, int * array, int *index){
     return;
 }
 
-// ukazkovy test
-int main(void)
+
+int main()
 {
-
-    int index = 0, key = 0, numberSet[500];;
-    FILE *source = fopen("./one_thousand_Source.txt", "r");
-    FILE *search = fopen("./one_thousand_Search.txt","r");
-    if(source == nullptr){printf("Unsuccessful opening of source file.\n"); exit(1);}
-    if(search == nullptr){printf("Unsuccessful opening of search file.\n"); exit(1);}
-    fscanf(source, "%d", &key);
-    struct Node *root=newNode(key);
-    while(fscanf(source, "%d", &key) == 1){
-        printf("%d\n", key);
-        if(!checkPresence(root,key))
-            insert(root,key);
-        else
-            printf("Key %d already present in AVL tree.\n");
+    // sem napis svoje riesenie
+    unsigned int *array = (unsigned int *)malloc(100000*sizeof(unsigned int));
+    int index = 0;
+    unsigned int input = 0;
+    scanf("%u",&input);
+    struct Node *root=newNode(input);
+    printf("-1\n");
+    while((scanf("%u",&input))==1){
+        if(!checkPresence(root,input)){
+            insert(root,input);
+            index = 0;
+            inorderTraversal(root,array,&index);
+            printClose(root,array,input,index);
+        }
+        else{
+            printClose(root,array,input,index);
+        }
+        //printNear(root,input);
     }
-
-    index=0;
-    while(fscanf(search, "%d", &numberSet[index]) == 1){
-        printf("%d ", numberSet[index]);
-        index++;}
-    for (index = 0; index < 500; index++)
-        if(!checkPresence(root,numberSet[index]))
-            printf("Key %d is not present in AVL tree.\n");
-        else
-            printf("Key %d FOUND in AVL tree.\n");
-    fclose(source);
-    fclose(search);
     return 0;
 }
+ */
