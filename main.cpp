@@ -27,7 +27,7 @@ int hashFunctionOne(int key){
 
 int compressFunctionTwo(int key, int size){
     int hash = hashFunctionOne(key);
-    int a = 24, b = 5, N = 2003;
+    int a = 24, b = 5, N = 1009;
     return (a*hash + b) % N;
 }
 
