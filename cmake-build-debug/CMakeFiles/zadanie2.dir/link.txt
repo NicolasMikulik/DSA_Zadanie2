@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/zadanie2.dir/main.cpp.o CMakeFiles/zadanie2.dir/number_to_file_generator.cpp.o  -o zadanie2 
