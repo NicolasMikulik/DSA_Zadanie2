@@ -204,6 +204,33 @@ own_avl.cpp.s:
 	$(MAKE) -f CMakeFiles/zadanie2.dir/build.make CMakeFiles/zadanie2.dir/own_avl.cpp.s
 .PHONY : own_avl.cpp.s
 
+own_bvs.o: own_bvs.c.o
+
+.PHONY : own_bvs.o
+
+# target to build an object file
+own_bvs.c.o:
+	$(MAKE) -f CMakeFiles/zadanie2.dir/build.make CMakeFiles/zadanie2.dir/own_bvs.c.o
+.PHONY : own_bvs.c.o
+
+own_bvs.i: own_bvs.c.i
+
+.PHONY : own_bvs.i
+
+# target to preprocess a source file
+own_bvs.c.i:
+	$(MAKE) -f CMakeFiles/zadanie2.dir/build.make CMakeFiles/zadanie2.dir/own_bvs.c.i
+.PHONY : own_bvs.c.i
+
+own_bvs.s: own_bvs.c.s
+
+.PHONY : own_bvs.s
+
+# target to generate assembly for a file
+own_bvs.c.s:
+	$(MAKE) -f CMakeFiles/zadanie2.dir/build.make CMakeFiles/zadanie2.dir/own_bvs.c.s
+.PHONY : own_bvs.c.s
+
 own_hash_table.o: own_hash_table.cpp.o
 
 .PHONY : own_hash_table.o
@@ -230,6 +257,33 @@ own_hash_table.s: own_hash_table.cpp.s
 own_hash_table.cpp.s:
 	$(MAKE) -f CMakeFiles/zadanie2.dir/build.make CMakeFiles/zadanie2.dir/own_hash_table.cpp.s
 .PHONY : own_hash_table.cpp.s
+
+used_hash_table.o: used_hash_table.c.o
+
+.PHONY : used_hash_table.o
+
+# target to build an object file
+used_hash_table.c.o:
+	$(MAKE) -f CMakeFiles/zadanie2.dir/build.make CMakeFiles/zadanie2.dir/used_hash_table.c.o
+.PHONY : used_hash_table.c.o
+
+used_hash_table.i: used_hash_table.c.i
+
+.PHONY : used_hash_table.i
+
+# target to preprocess a source file
+used_hash_table.c.i:
+	$(MAKE) -f CMakeFiles/zadanie2.dir/build.make CMakeFiles/zadanie2.dir/used_hash_table.c.i
+.PHONY : used_hash_table.c.i
+
+used_hash_table.s: used_hash_table.c.s
+
+.PHONY : used_hash_table.s
+
+# target to generate assembly for a file
+used_hash_table.c.s:
+	$(MAKE) -f CMakeFiles/zadanie2.dir/build.make CMakeFiles/zadanie2.dir/used_hash_table.c.s
+.PHONY : used_hash_table.c.s
 
 used_red_black_tree.o: used_red_black_tree.cpp.o
 
@@ -276,9 +330,15 @@ help:
 	@echo "... own_avl.o"
 	@echo "... own_avl.i"
 	@echo "... own_avl.s"
+	@echo "... own_bvs.o"
+	@echo "... own_bvs.i"
+	@echo "... own_bvs.s"
 	@echo "... own_hash_table.o"
 	@echo "... own_hash_table.i"
 	@echo "... own_hash_table.s"
+	@echo "... used_hash_table.o"
+	@echo "... used_hash_table.i"
+	@echo "... used_hash_table.s"
 	@echo "... used_red_black_tree.o"
 	@echo "... used_red_black_tree.i"
 	@echo "... used_red_black_tree.s"

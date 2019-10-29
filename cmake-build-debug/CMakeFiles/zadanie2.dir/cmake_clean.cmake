@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/zadanie2.dir/own_hash_table.cpp.o"
   "CMakeFiles/zadanie2.dir/own_avl.cpp.o"
   "CMakeFiles/zadanie2.dir/used_red_black_tree.cpp.o"
+  "CMakeFiles/zadanie2.dir/used_hash_table.c.o"
+  "CMakeFiles/zadanie2.dir/own_bvs.c.o"
   "zadanie2.pdb"
   "zadanie2"
 )

@@ -6,6 +6,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/nicolas/CLionProjects/zadanie2/main.c" "/home/nicolas/CLionProjects/zadanie2/cmake-build-debug/CMakeFiles/zadanie2.dir/main.c.o"
+  "/home/nicolas/CLionProjects/zadanie2/own_bvs.c" "/home/nicolas/CLionProjects/zadanie2/cmake-build-debug/CMakeFiles/zadanie2.dir/own_bvs.c.o"
+  "/home/nicolas/CLionProjects/zadanie2/used_hash_table.c" "/home/nicolas/CLionProjects/zadanie2/cmake-build-debug/CMakeFiles/zadanie2.dir/used_hash_table.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

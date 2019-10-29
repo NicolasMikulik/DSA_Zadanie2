@@ -93,7 +93,13 @@
 		<Unit filename="/home/nicolas/CLionProjects/zadanie2/own_avl.cpp">
 			<Option target="zadanie2"/>
 		</Unit>
+		<Unit filename="/home/nicolas/CLionProjects/zadanie2/own_bvs.c">
+			<Option target="zadanie2"/>
+		</Unit>
 		<Unit filename="/home/nicolas/CLionProjects/zadanie2/own_hash_table.cpp">
+			<Option target="zadanie2"/>
+		</Unit>
+		<Unit filename="/home/nicolas/CLionProjects/zadanie2/used_hash_table.c">
 			<Option target="zadanie2"/>
 		</Unit>
 		<Unit filename="/home/nicolas/CLionProjects/zadanie2/used_red_black_tree.cpp">

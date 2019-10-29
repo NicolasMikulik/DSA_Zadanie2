@@ -3,6 +3,8 @@
 
 CMakeFiles/zadanie2.dir/main.c.o: ../main.c
 
+CMakeFiles/zadanie2.dir/used_hash_table.c.o: ../used_hash_table.c
+
 CMakeFiles/zadanie2.dir/number_to_file_generator.cpp.o: ../number_to_file_generator.cpp
 
 CMakeFiles/zadanie2.dir/own_avl.cpp.o: ../own_avl.cpp

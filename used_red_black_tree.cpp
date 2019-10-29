@@ -1,5 +1,5 @@
-//
-// Created by nicolas on 29. 10. 2019.
+//https://stackoverflow.com/questions/20734/red-black-trees
+// Credit Woimbée Arthur: https://gist.github.com/VictorGarritano/5f894be162d39e9bdd5c on 11 June 2019
 //
 /*
 // C program for Red-Black Tree insertion

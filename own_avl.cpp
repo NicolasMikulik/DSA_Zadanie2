@@ -213,7 +213,7 @@ struct Node* insert(struct Node* node, int key){
         node->left = insert(node->left, key);
     else
         node->right = insert(node->right, key);
-    node->height =  + max(getHeight(node->left), getHeight(node->right));
+    node->height = 1 + max(getHeight(node->left), getHeight(node->right));
     int balance = getBalance(node);
 
     if(balance < -1){ //left subtree is longer
