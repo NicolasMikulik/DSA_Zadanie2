@@ -12,8 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee22d618-e1b2-4148-88bb-9117bc619351" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/own_avl.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/own_hash_table.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
@@ -24,13 +22,15 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/main.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/zadanie2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/zadanie2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/zadanie2.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/zadanie2.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/own_avl.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/own_avl.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +83,10 @@
       <updated>1572176749080</updated>
       <workItem from="1572176751658" duration="10889000" />
       <workItem from="1572194825981" duration="963000" />
-      <workItem from="1572197730920" duration="2842000" />
+      <workItem from="1572197730920" duration="3049000" />
+      <workItem from="1572246414712" duration="608000" />
+      <workItem from="1572250734959" duration="23000" />
+      <workItem from="1572332134888" duration="1850000" />
     </task>
     <task id="LOCAL-00001" summary="pt1">
       <created>1572194665984</created>
@@ -99,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572195297363</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="pt3 own avl added">
+      <created>1572200979435</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572200979435</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +131,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pt1" />
     <MESSAGE value="pt2 working" />
-    <option name="LAST_COMMIT_MESSAGE" value="pt2 working" />
+    <MESSAGE value="pt3 own avl added" />
+    <option name="LAST_COMMIT_MESSAGE" value="pt3 own avl added" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

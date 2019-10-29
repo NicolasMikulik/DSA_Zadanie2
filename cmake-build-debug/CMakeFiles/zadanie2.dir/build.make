@@ -57,18 +57,18 @@ include CMakeFiles/zadanie2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/zadanie2.dir/flags.make
 
-CMakeFiles/zadanie2.dir/main.cpp.o: CMakeFiles/zadanie2.dir/flags.make
-CMakeFiles/zadanie2.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicolas/CLionProjects/zadanie2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/zadanie2.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zadanie2.dir/main.cpp.o -c /home/nicolas/CLionProjects/zadanie2/main.cpp
+CMakeFiles/zadanie2.dir/main.c.o: CMakeFiles/zadanie2.dir/flags.make
+CMakeFiles/zadanie2.dir/main.c.o: ../main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicolas/CLionProjects/zadanie2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/zadanie2.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zadanie2.dir/main.c.o   -c /home/nicolas/CLionProjects/zadanie2/main.c
 
-CMakeFiles/zadanie2.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zadanie2.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicolas/CLionProjects/zadanie2/main.cpp > CMakeFiles/zadanie2.dir/main.cpp.i
+CMakeFiles/zadanie2.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zadanie2.dir/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nicolas/CLionProjects/zadanie2/main.c > CMakeFiles/zadanie2.dir/main.c.i
 
-CMakeFiles/zadanie2.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zadanie2.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicolas/CLionProjects/zadanie2/main.cpp -o CMakeFiles/zadanie2.dir/main.cpp.s
+CMakeFiles/zadanie2.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zadanie2.dir/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nicolas/CLionProjects/zadanie2/main.c -o CMakeFiles/zadanie2.dir/main.c.s
 
 CMakeFiles/zadanie2.dir/number_to_file_generator.cpp.o: CMakeFiles/zadanie2.dir/flags.make
 CMakeFiles/zadanie2.dir/number_to_file_generator.cpp.o: ../number_to_file_generator.cpp
@@ -109,23 +109,38 @@ CMakeFiles/zadanie2.dir/own_avl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zadanie2.dir/own_avl.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicolas/CLionProjects/zadanie2/own_avl.cpp -o CMakeFiles/zadanie2.dir/own_avl.cpp.s
 
+CMakeFiles/zadanie2.dir/used_red_black_tree.cpp.o: CMakeFiles/zadanie2.dir/flags.make
+CMakeFiles/zadanie2.dir/used_red_black_tree.cpp.o: ../used_red_black_tree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicolas/CLionProjects/zadanie2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/zadanie2.dir/used_red_black_tree.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zadanie2.dir/used_red_black_tree.cpp.o -c /home/nicolas/CLionProjects/zadanie2/used_red_black_tree.cpp
+
+CMakeFiles/zadanie2.dir/used_red_black_tree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zadanie2.dir/used_red_black_tree.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicolas/CLionProjects/zadanie2/used_red_black_tree.cpp > CMakeFiles/zadanie2.dir/used_red_black_tree.cpp.i
+
+CMakeFiles/zadanie2.dir/used_red_black_tree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zadanie2.dir/used_red_black_tree.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicolas/CLionProjects/zadanie2/used_red_black_tree.cpp -o CMakeFiles/zadanie2.dir/used_red_black_tree.cpp.s
+
 # Object files for target zadanie2
 zadanie2_OBJECTS = \
-"CMakeFiles/zadanie2.dir/main.cpp.o" \
+"CMakeFiles/zadanie2.dir/main.c.o" \
 "CMakeFiles/zadanie2.dir/number_to_file_generator.cpp.o" \
 "CMakeFiles/zadanie2.dir/own_hash_table.cpp.o" \
-"CMakeFiles/zadanie2.dir/own_avl.cpp.o"
+"CMakeFiles/zadanie2.dir/own_avl.cpp.o" \
+"CMakeFiles/zadanie2.dir/used_red_black_tree.cpp.o"
 
 # External object files for target zadanie2
 zadanie2_EXTERNAL_OBJECTS =
 
-zadanie2: CMakeFiles/zadanie2.dir/main.cpp.o
+zadanie2: CMakeFiles/zadanie2.dir/main.c.o
 zadanie2: CMakeFiles/zadanie2.dir/number_to_file_generator.cpp.o
 zadanie2: CMakeFiles/zadanie2.dir/own_hash_table.cpp.o
 zadanie2: CMakeFiles/zadanie2.dir/own_avl.cpp.o
+zadanie2: CMakeFiles/zadanie2.dir/used_red_black_tree.cpp.o
 zadanie2: CMakeFiles/zadanie2.dir/build.make
 zadanie2: CMakeFiles/zadanie2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nicolas/CLionProjects/zadanie2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable zadanie2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nicolas/CLionProjects/zadanie2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable zadanie2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/zadanie2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -6,13 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/nicolas/CLionProjects/zadanie2/main.cpp
-stdio.h
--
-stdlib.h
--
-stdbool.h
--
-math.h
--
-

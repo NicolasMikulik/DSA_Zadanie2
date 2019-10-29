@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/nicolas/CLionProjects/zadanie2/main.cpp">
+		<Unit filename="/home/nicolas/CLionProjects/zadanie2/main.c">
 			<Option target="zadanie2"/>
 		</Unit>
 		<Unit filename="/home/nicolas/CLionProjects/zadanie2/number_to_file_generator.cpp">
@@ -94,6 +94,9 @@
 			<Option target="zadanie2"/>
 		</Unit>
 		<Unit filename="/home/nicolas/CLionProjects/zadanie2/own_hash_table.cpp">
+			<Option target="zadanie2"/>
+		</Unit>
+		<Unit filename="/home/nicolas/CLionProjects/zadanie2/used_red_black_tree.cpp">
 			<Option target="zadanie2"/>
 		</Unit>
 		<Unit filename="/home/nicolas/CLionProjects/zadanie2/CMakeLists.txt">
