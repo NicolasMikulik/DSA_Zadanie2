@@ -73,3 +73,52 @@ int main()
     return 0;
 }
  */
+
+/*vlastny main pre meranie casu vlozenia vlastneho BVS
+int main(void)
+{
+    //unsigned int *array = (unsigned int *)malloc(100000*sizeof(unsigned int));
+    int index = 0, key = 0, numberSet[25000];
+    struct timespec tstart={0,0}, tend={0,0};
+    FILE *source = fopen("./fifty_thousand_Source.txt", "r");
+    FILE *searchInput = fopen("./fifty_thousand_Search.txt","r");
+    FILE *insertRecord = fopen("./fifty_thousand_BST_times.txt", "w");
+    if(source == NULL){printf("Unsuccessful opening of source file.\n"); exit(1);}
+    if(searchInput == NULL){printf("Unsuccessful opening of search file.\n"); exit(1);}
+    fscanf(source, "%d", &key);
+    struct node *root=newNode(key);
+    while(fscanf(source, "%d", &key) == 1){
+        printf("%d\n", key);
+        clock_gettime(CLOCK_MONOTONIC, &tstart);
+        if(checkPresence(root,key) == NULL){
+            //printf("Adding key %d into the BST.\n",key);
+            addNode(root,key);
+            clock_gettime(CLOCK_MONOTONIC, &tend);
+            fprintf(insertRecord, "%.9f\n", ((double)tend.tv_sec + 1.0e-9*tend.tv_nsec) -
+                                            ((double)tstart.tv_sec + 1.0e-9*tstart.tv_nsec));
+        }
+        else{
+            clock_gettime(CLOCK_MONOTONIC, &tend);
+            fprintf(insertRecord, "%.9f\n", ((double)tend.tv_sec + 1.0e-9*tend.tv_nsec) -
+                                        ((double)tstart.tv_sec + 1.0e-9*tstart.tv_nsec));
+            printf("Key %d already present in BST.\n",key);
+        }
+    }
+
+    index=0;
+    while(fscanf(searchInput, "%d", &numberSet[index]) == 1){
+        printf("%d ", numberSet[index]);
+        index++;}
+
+    for (index = 0; index < 25000; index++){
+        if(checkPresence(root, numberSet[index]) == NULL)
+            printf("Key %d is not present in BST.\n", numberSet[index]);
+        else
+            printf("Key %d FOUND in BST.\n", numberSet[index]);
+        }
+fclose(source);
+fclose(searchInput);
+fclose(insertRecord);
+return 0;
+}
+ */

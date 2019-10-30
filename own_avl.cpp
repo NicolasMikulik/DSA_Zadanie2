@@ -43,26 +43,26 @@ struct Node* newNode(unsigned int key){
 }
 
 struct Node* rotateLeft(struct Node* pivot){
-    struct Node* pivotRightChiu = pivot->right;
-    struct Node* leftChiu = pivotRightChiu->left;
+    struct Node* pivotRightchild = pivot->right;
+    struct Node* leftchild = pivotRightchild->left;
 
-    pivotRightChiu->left = pivot;
-    pivot->right = leftChiu;
+    pivotRightchild->left = pivot;
+    pivot->right = leftchild;
 
     pivot->height = 1 + max(pivot->left->height, pivot->right->height);
-    pivotRightChiu->height = 1 + max(pivotRightChiu->left->height, pivotRightChiu->right->height);
+    pivotRightchild->height = 1 + max(pivotRightchild->left->height, pivotRightchild->right->height);
     return pivot;
 }
 
 struct Node* rotateRight(struct Node* pivot){
-    struct Node* pivotLeftChiu = pivot->left;
-    struct Node* rightChiu = pivotLeftChiu->right;
+    struct Node* pivotLeftchild = pivot->left;
+    struct Node* rightchild = pivotLeftchild->right;
 
-    pivotLeftChiu->right = pivot;
-    pivot->left = rightChiu;
+    pivotLeftchild->right = pivot;
+    pivot->left = rightchild;
 
     pivot->height = 1 + max(pivot->left->height, pivot->right->height);
-    pivotLeftChiu->height = 1 + max(pivotLeftChiu->left->height, pivotLeftChiu->right->height);
+    pivotLeftchild->height = 1 + max(pivotLeftchild->left->height, pivotLeftchild->right->height);
     return pivot;
 }
 
@@ -77,19 +77,19 @@ struct Node* insert(struct Node* node, unsigned int key){
     int balance = getBalance(node);
 
     if(balance < -1){ //left subtree is longer
-        if(node->left->key > key){ //left chiu
+        if(node->left->key > key){ //left child
             rotateRight(node);
         }
-        if(key > node->left->key){ //right chiu
+        if(key > node->left->key){ //right child
             rotateLeft(node->left);
             rotateRight(node);
         }
     }
     if(balance > 1){ //right subtree is longer
-        if(node->right->key < key){ //right chiu
+        if(node->right->key < key){ //right child
             rotateLeft(node);
         }
-        if(key < node->right->key){ //left chiu
+        if(key < node->right->key){ //left child
             rotateRight(node->right);
             rotateLeft(node);
         }
@@ -183,26 +183,26 @@ struct Node* newNode( int key){
 }
 
 struct Node* rotateLeft(struct Node* pivot){
-    struct Node* pivotRightChiu = pivot->right;
-    struct Node* leftChiu = pivotRightChiu->left;
+    struct Node* pivotRightchild = pivot->right;
+    struct Node* leftchild = pivotRightchild->left;
 
-    pivotRightChiu->left = pivot;
-    pivot->right = leftChiu;
+    pivotRightchild->left = pivot;
+    pivot->right = leftchild;
 
     pivot->height = 1 + max(pivot->left->height, pivot->right->height);
-    pivotRightChiu->height = 1 + max(pivotRightChiu->left->height, pivotRightChiu->right->height);
+    pivotRightchild->height = 1 + max(pivotRightchild->left->height, pivotRightchild->right->height);
     return pivot;
 }
 
 struct Node* rotateRight(struct Node* pivot){
-    struct Node* pivotLeftChiu = pivot->left;
-    struct Node* rightChiu = pivotLeftChiu->right;
+    struct Node* pivotLeftchild = pivot->left;
+    struct Node* rightchild = pivotLeftchild->right;
 
-    pivotLeftChiu->right = pivot;
-    pivot->left = rightChiu;
+    pivotLeftchild->right = pivot;
+    pivot->left = rightchild;
 
     pivot->height = 1 + max(pivot->left->height, pivot->right->height);
-    pivotLeftChiu->height = 1 + max(pivotLeftChiu->left->height, pivotLeftChiu->right->height);
+    pivotLeftchild->height = 1 + max(pivotLeftchild->left->height, pivotLeftchild->right->height);
     return pivot;
 }
 
@@ -217,19 +217,19 @@ struct Node* insert(struct Node* node, int key){
     int balance = getBalance(node);
 
     if(balance < -1){ //left subtree is longer
-        if(node->left->key > key){ //left chiu
+        if(node->left->key > key){ //left child
             rotateRight(node);
         }
-        if(key > node->left->key){ //right chiu
+        if(key > node->left->key){ //right child
             rotateLeft(node->left);
             rotateRight(node);
         }
     }
     if(balance > 1){ //right subtree is longer
-        if(node->right->key < key){ //right chiu
+        if(node->right->key < key){ //right child
             rotateLeft(node);
         }
-        if(key < node->right->key){ //left chiu
+        if(key < node->right->key){ //left child
             rotateRight(node->right);
             rotateLeft(node);
         }

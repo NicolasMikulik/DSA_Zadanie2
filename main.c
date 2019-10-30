@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
+#include <time.h>
 
 struct node{
     int value;
@@ -73,44 +73,33 @@ void inorder(struct node *root){
 
 // ukazkovy test
 int main(void)
-{   /*struct node *root=newNode(15);
-    addNode(root,10);
-    addNode(root, 20);
-    addNode(root, 2);
-    addNode(root, 19);
-    inorder(root);
-    if(checkPresence(root,19) == NULL){
-        printf("19 not in BST\n");
-    }
-    else
-        printf("19 FOUND\n");
-    if(checkPresence(root,3) == NULL){
-        printf("3 not in BST\n");
-    }
-    else
-        printf("3 FOUND\n");
-    if(checkPresence(root,-20) == NULL){
-        printf("-20 not in BST\n");
-    }
-    else
-        printf("-20 FOUND\n");*/
-
-    unsigned int *array = (unsigned int *)malloc(100000*sizeof(unsigned int));
-    int index = 0, key = 0, numberSet[500];;
-    FILE *source = fopen("./one_thousand_Source.txt", "r");
-    FILE *searchInput = fopen("./one_thousand_Search.txt","r");
+{
+    //unsigned int *array = (unsigned int *)malloc(100000*sizeof(unsigned int));
+    int index = 0, key = 0, numberSet[25000];
+    struct timespec tstart={0,0}, tend={0,0};
+    FILE *source = fopen("./fifty_thousand_Source.txt", "r");
+    FILE *searchInput = fopen("./fifty_thousand_Search.txt","r");
+    FILE *insertRecord = fopen("./fifty_thousand_BST_times.txt", "w");
     if(source == NULL){printf("Unsuccessful opening of source file.\n"); exit(1);}
     if(searchInput == NULL){printf("Unsuccessful opening of search file.\n"); exit(1);}
     fscanf(source, "%d", &key);
     struct node *root=newNode(key);
     while(fscanf(source, "%d", &key) == 1){
         printf("%d\n", key);
+        clock_gettime(CLOCK_MONOTONIC, &tstart);
         if(checkPresence(root,key) == NULL){
-            printf("Adding key %d into the BST.\n",key);
+            //printf("Adding key %d into the BST.\n",key);
             addNode(root,key);
+            clock_gettime(CLOCK_MONOTONIC, &tend);
+            fprintf(insertRecord, "%.9f\n", ((double)tend.tv_sec + 1.0e-9*tend.tv_nsec) -
+                                            ((double)tstart.tv_sec + 1.0e-9*tstart.tv_nsec));
         }
-        else
+        else{
+            clock_gettime(CLOCK_MONOTONIC, &tend);
+            fprintf(insertRecord, "%.9f\n", ((double)tend.tv_sec + 1.0e-9*tend.tv_nsec) -
+                                        ((double)tstart.tv_sec + 1.0e-9*tstart.tv_nsec));
             printf("Key %d already present in BST.\n",key);
+        }
     }
     /*index = 0;
     inorder(root);
@@ -121,7 +110,7 @@ int main(void)
         printf("%d ", numberSet[index]);
         index++;}
 
-    for (index = 0; index < 500; index++){
+    for (index = 0; index < 25000; index++){
         if(checkPresence(root, numberSet[index]) == NULL)
             printf("Key %d is not present in BST.\n", numberSet[index]);
         else
@@ -129,6 +118,6 @@ int main(void)
     }
     fclose(source);
     fclose(searchInput);
-
+    fclose(insertRecord);
     return 0;
 }
