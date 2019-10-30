@@ -3,6 +3,8 @@
 
 CMakeFiles/zadanie2.dir/main.c.o
  /home/nicolas/CLionProjects/zadanie2/main.c
+CMakeFiles/zadanie2.dir/own_bvs.c.o
+ /home/nicolas/CLionProjects/zadanie2/own_bvs.c
 CMakeFiles/zadanie2.dir/used_hash_table.c.o
  /home/nicolas/CLionProjects/zadanie2/used_hash_table.c
 CMakeFiles/zadanie2.dir/number_to_file_generator.cpp.o

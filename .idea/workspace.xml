@@ -12,25 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee22d618-e1b2-4148-88bb-9117bc619351" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/own_bvs.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/used_hash_table.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/zadanie2.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/zadanie2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/zadanie2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/zadanie2.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/zadanie2.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/own_avl.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/own_avl.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/used_red_black_tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/used_red_black_tree.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +73,8 @@
       <workItem from="1572246414712" duration="608000" />
       <workItem from="1572250734959" duration="23000" />
       <workItem from="1572332134888" duration="4783000" />
-      <workItem from="1572362098716" duration="1851000" />
+      <workItem from="1572362098716" duration="5214000" />
+      <workItem from="1572415627409" duration="695000" />
     </task>
     <task id="LOCAL-00001" summary="pt1">
       <created>1572194665984</created>
@@ -117,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572334213393</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="pt5 used hash table added">
+      <created>1572364148256</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572364148256</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +135,7 @@
     <MESSAGE value="pt2 working" />
     <MESSAGE value="pt3 own avl added" />
     <MESSAGE value="pt4 used red-black tree added" />
-    <option name="LAST_COMMIT_MESSAGE" value="pt4 used red-black tree added" />
+    <MESSAGE value="pt5 used hash table added" />
+    <option name="LAST_COMMIT_MESSAGE" value="pt5 used hash table added" />
   </component>
 </project>

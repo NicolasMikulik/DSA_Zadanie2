@@ -1,130 +1,134 @@
+// uloha3-1.c -- Nicolas Mikulík, 7.10.2019 08:16
+
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define SIZE 1000
-
-struct DataItem {
-    int data;
-    int key;
+struct node{
+    int value;
+    struct node *left;
+    struct node *right;
 };
 
-struct DataItem* hashArray[SIZE];
-struct DataItem* dummyItem;
-struct DataItem* item;
-
-int hashCode(int key) {
-    if(key < 0)
-        key *= -1;
-    return key % SIZE;
+struct node* newNode(int value){
+    struct node *node=(struct node*)malloc(sizeof(struct node));
+    node->value=value;
+    node->left=NULL;
+    node->right=NULL;
+    return node;
 }
 
-struct DataItem *search(int key) {
-    //get the hash
-    int hashIndex = hashCode(key);
-    int checkedValue = hashArray[hashIndex], first = 0;
-    //move in array until an empty
-    while(hashArray[hashIndex] != NULL) {
-        if(hashArray[hashIndex]->key == key)
-            return hashArray[hashIndex];
-        if(hashArray[hashIndex] == checkedValue){
-            if(first == 0)
-                first++;
-            else {
-                printf("%d is not present in hash table with linear probing.\n", key);
-                break;
-            }
-        }
-        //go to next cell
-        ++hashIndex;
-        //wrap around the table
-        hashIndex %= SIZE;
+struct node *checkPresence(struct node* node, int value){
+    if(node == NULL || node->value == value){
+        return node;
     }
-    return NULL;
-}
-
-void insert(int key,int data) {
-    struct DataItem *item = (struct DataItem*) malloc(sizeof(struct DataItem));
-    item->data = data;
-    item->key = key;
-    //printf("Key %d Data %d \n", item->key, item->data);
-    //get the hash
-    int hashIndex = hashCode(key);
-
-    //move in array until an empty or deleted cell
-    while(hashArray[hashIndex] != NULL && hashArray[hashIndex]->key != -1) {
-        if(hashArray[hashIndex]->key == key || hashArray[hashIndex]->data == data){
-            printf("%d already present in hash table with linear probing.\n", hashArray[hashIndex]->data);
-            return;
-        }
-        //go to next cell
-        ++hashIndex;
-        //wrap around the table
-        hashIndex %= SIZE;
+    if(node->value > value){
+        return checkPresence(node->left,value);
     }
-    hashArray[hashIndex] = item;
+    return checkPresence(node->right,value);
+}
+void addNode(struct node* node, int value){
+    if(node == NULL){
+        node = newNode(value);
+        return;
+    }
+    if(node->value > value && node->left == NULL){
+        node->left = newNode(value);
+        return;
+    }
+    if(node->value > value && node->left != NULL){
+        addNode(node->left,value);
+        return;
+    }
+    if(node->value < value && node->right == NULL){
+        node->right = newNode(value);
+        return;
+    }
+    if(node->value < value && node->right != NULL){
+        addNode(node->right,value);
+        return;
+    }
 }
 
-struct DataItem* delete(struct DataItem* item) {
-    int key = item->key;
-    //get the hash
-    int hashIndex = hashCode(key);
-    //move in array until an empty
-    while(hashArray[hashIndex] != NULL) {
-        if(hashArray[hashIndex]->key == key) {
-            struct DataItem* temp = hashArray[hashIndex];
-            //assign a dummy item at deleted position
-            hashArray[hashIndex] = dummyItem;
-            return temp;
-        }
-        //go to next cell
-        ++hashIndex;
-        //wrap around the table
-        hashIndex %= SIZE;
+void inorderTraversal(struct node *root, unsigned int * array, int *index){
+    if(root == NULL)
+        return;
+    else{
+        inorderTraversal(root->left, array, index);
+        array[*index] = root->value;
+        *index = *index + 1;
+        inorderTraversal(root->right, array, index);
     }
-    return NULL;
 }
 
-void display() {
-    int i = 0;
-    for(i = 0; i<SIZE; i++) {
-        if(hashArray[i] != NULL)
-            printf(" (%d,%d)",hashArray[i]->key,hashArray[i]->data);
-        else
-            printf(" ~~ ");
+void inorder(struct node *root){
+    if(root == NULL)
+        return;
+    else{
+        inorder(root->left);
+        printf("%d < ", root->value);
+        inorder(root->right);
     }
-    printf("\n");
 }
+
 // ukazkovy test
 int main(void)
-{
+{   /*struct node *root=newNode(15);
+    addNode(root,10);
+    addNode(root, 20);
+    addNode(root, 2);
+    addNode(root, 19);
+    inorder(root);
+    if(checkPresence(root,19) == NULL){
+        printf("19 not in BST\n");
+    }
+    else
+        printf("19 FOUND\n");
+    if(checkPresence(root,3) == NULL){
+        printf("3 not in BST\n");
+    }
+    else
+        printf("3 FOUND\n");
+    if(checkPresence(root,-20) == NULL){
+        printf("-20 not in BST\n");
+    }
+    else
+        printf("-20 FOUND\n");*/
+
+    unsigned int *array = (unsigned int *)malloc(100000*sizeof(unsigned int));
     int index = 0, key = 0, numberSet[500];;
     FILE *source = fopen("./one_thousand_Source.txt", "r");
     FILE *searchInput = fopen("./one_thousand_Search.txt","r");
     if(source == NULL){printf("Unsuccessful opening of source file.\n"); exit(1);}
     if(searchInput == NULL){printf("Unsuccessful opening of search file.\n"); exit(1);}
-    dummyItem = (struct DataItem*) malloc(sizeof(struct DataItem));
-    dummyItem->data = -1;
-    dummyItem->key = -1;
-    //fscanf(source, "%d", &key);
-    struct node *root=NULL;
+    fscanf(source, "%d", &key);
+    struct node *root=newNode(key);
     while(fscanf(source, "%d", &key) == 1){
         printf("%d\n", key);
-        insert(key,key);
+        if(checkPresence(root,key) == NULL){
+            printf("Adding key %d into the BST.\n",key);
+            addNode(root,key);
+        }
+        else
+            printf("Key %d already present in BST.\n",key);
     }
+    /*index = 0;
+    inorder(root);
+    for(int i = 0; i < index; i++)
+        printf("%d < ",array[index]);*/
     index=0;
     while(fscanf(searchInput, "%d", &numberSet[index]) == 1){
         printf("%d ", numberSet[index]);
         index++;}
 
     for (index = 0; index < 500; index++){
-        if(search(numberSet[index]) == NULL)
-            printf("Key %d is not present in hash table with linear probing.\n", numberSet[index]);
+        if(checkPresence(root, numberSet[index]) == NULL)
+            printf("Key %d is not present in BST.\n", numberSet[index]);
         else
-            printf("Key %d FOUND in hash table with linear probing.\n", numberSet[index]);
+            printf("Key %d FOUND in BST.\n", numberSet[index]);
     }
     fclose(source);
     fclose(searchInput);
+
     return 0;
 }
