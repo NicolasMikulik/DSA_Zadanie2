@@ -76,7 +76,7 @@
       <workItem from="1572444486298" duration="5569000" />
       <workItem from="1572505436140" duration="865000" />
       <workItem from="1572520099693" duration="2339000" />
-      <workItem from="1572537740213" duration="614000" />
+      <workItem from="1572537740213" duration="1132000" />
     </task>
     <task id="LOCAL-00001" summary="pt1">
       <created>1572194665984</created>
@@ -127,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572448383147</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="pt8 improved avl">
+      <created>1572538868295</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572538868295</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +161,7 @@
     <MESSAGE value="pt5 used hash table added" />
     <MESSAGE value="pt6 own bst added" />
     <MESSAGE value="pt7 recorded times for bst" />
-    <option name="LAST_COMMIT_MESSAGE" value="pt7 recorded times for bst" />
+    <MESSAGE value="pt8 improved avl" />
+    <option name="LAST_COMMIT_MESSAGE" value="pt8 improved avl" />
   </component>
 </project>

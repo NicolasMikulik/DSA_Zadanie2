@@ -66,10 +66,10 @@ struct Node* insert(struct Node* node, int key){
     if(node == NULL)
         return newNode(key);
     if(key < node->key){
-        printf("INserting %d to the left of %d\n", key, node->key);
+        //printf("INserting %d to the left of %d\n", key, node->key);
         node->left = insert(node->left, key);}
     else{
-        printf("INserting %d to the RIGHT of %d\n", key, node->key);
+        //printf("INserting %d to the RIGHT of %d\n", key, node->key);
         node->right = insert(node->right, key);}
     node->height =  + max(getHeight(node->left), getHeight(node->right));
     int balance = getBalance(node);
@@ -128,11 +128,11 @@ int main(void)
     insert(root, -117);
     printf("root->left %d root %d root->right %d\n", root->left->key, root->key, root->left->right->key);*/
     //unsigned int *array = (unsigned int *)malloc(100000*sizeof(unsigned int));
-    int index = 0, key = 0, numberSet[500];
+    int index = 0, key = 0, numberSet[25000];
     struct timespec tstart={0,0}, tend={0,0};
-    FILE *source = fopen("./one_thousand_Source.txt", "r");
-    FILE *searchInput = fopen("./one_thousand_Search.txt","r");
-    FILE *insertRecord = fopen("./one_thousand_AVL_times.txt", "w");
+    FILE *source = fopen("./fifty_thousand_Source.txt", "r");
+    FILE *searchInput = fopen("./fifty_thousand_Search.txt","r");
+    FILE *insertRecord = fopen("./fifty_thousand_AVL_times.txt", "w");
     if(source == NULL){printf("Unsuccessful opening of source file.\n"); exit(1);}
     if(searchInput == NULL){printf("Unsuccessful opening of search file.\n"); exit(1);}
     if(insertRecord == NULL){printf("Unsuccessful opening of recording file.\n"); exit(1);}
@@ -163,7 +163,7 @@ int main(void)
         printf("%d ", numberSet[index]);
         index++;}
 
-    for (index = 0; index < 500; index++){
+    for (index = 0; index < 25000; index++){
         if(NULL == checkPresence(root,numberSet[index]))
             printf("Key %d is not present in AVL tree.\n",numberSet[index]);
         else
