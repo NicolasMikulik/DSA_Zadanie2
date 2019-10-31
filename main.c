@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define SIZE 1000
+#define SIZE 50000
 
 struct Item{
     int key;
@@ -27,7 +27,7 @@ int hashFunctionOne(int key){
 
 int compressFunctionTwo(int key){
     int hash = hashFunctionOne(key);
-    int a = 24, b = 5, N = 1009;
+    int a = 24, b = 5, N = 49999;
     return (a*hash + b) % N;
 }
 
@@ -89,14 +89,14 @@ struct Item *find(struct Item **hashArray, int key) {
 // ukazkovy test
 int main(void)
 {
-    int index = 0, key = 0, numberSet[500];
+    int index = 0, key = 0, numberSet[25000];
     struct Item *hashArray[SIZE];
     for(index=0;index<SIZE;index++)
         hashArray[index] = NULL;
     struct timespec tstart={0,0}, tend={0,0};
-    FILE *source = fopen("./one_thousand_Source.txt", "r");
-    FILE *searchInput = fopen("./one_thousand_Search.txt","r");
-    FILE *insertRecord = fopen("./one_thousand_ownHash_times.txt", "w");
+    FILE *source = fopen("./fifty_thousand_Source.txt", "r");
+    FILE *searchInput = fopen("./fifty_thousand_Search.txt","r");
+    FILE *insertRecord = fopen("./fifty_thousand_ownHash_times.txt", "w");
     if(source == NULL){printf("Unsuccessful opening of source file.\n"); exit(1);}
     if(searchInput == NULL){printf("Unsuccessful opening of search file.\n"); exit(1);}
     if(insertRecord == NULL){printf("Unsuccessful opening of recording file.\n"); exit(1);}
@@ -119,7 +119,7 @@ int main(void)
         printf("%d ", numberSet[index]);
         index++;}
 
-    for (index = 0; index < 500; index++){
+    for (index = 0; index < 25000; index++){
         find(hashArray, numberSet[index]);}
     fclose(source);
     fclose(searchInput);
